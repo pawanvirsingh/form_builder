@@ -1,7 +1,7 @@
 FormBuilder
 ===========
 
-This project is about creating and sharing the form and colleting the response from users
+This project is about creating and sharing the form and collecting the response from users
 
 .. image:: https://img.shields.io/badge/built%20with-Cookiecutter%20Django-ff69b4.svg
      :target: https://github.com/pydanny/cookiecutter-django/
@@ -35,68 +35,9 @@ Setting Up Your Users
 
 For convenience, you can keep your normal user logged in on Chrome and your superuser logged in on Firefox (or similar), so that you can see how the site behaves for both kinds of users.
 
-Type checks
-^^^^^^^^^^^
 
-Running type checks with mypy:
+Setting Up Project With docker
+^^^^^^^^^^^^^^^^^^^^^
 
-::
-
-  $ mypy formbuilder
-
-Test coverage
-^^^^^^^^^^^^^
-
-To run the tests, check your test coverage, and generate an HTML coverage report::
-
-    $ coverage run -m pytest
-    $ coverage html
-    $ open htmlcov/index.html
-
-Running tests with py.test
-~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-::
-
-  $ pytest
-
-Live reloading and Sass CSS compilation
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Moved to `Live reloading and SASS compilation`_.
-
-.. _`Live reloading and SASS compilation`: http://cookiecutter-django.readthedocs.io/en/latest/live-reloading-and-sass-compilation.html
-
-
-
-
-Email Server
-^^^^^^^^^^^^
-
-In development, it is often nice to be able to see emails that are being sent from your application. For that reason local SMTP server `MailHog`_ with a web interface is available as docker container.
-
-Container mailhog will start automatically when you will run all docker containers.
-Please check `cookiecutter-django Docker documentation`_ for more details how to start all containers.
-
-With MailHog running, to view messages that are sent by your application, open your browser and go to ``http://127.0.0.1:8025``
-
-.. _mailhog: https://github.com/mailhog/MailHog
-
-
-
-Deployment
-----------
-
-The following details how to deploy this application.
-
-
-
-Docker
-^^^^^^
-
-See detailed `cookiecutter-django Docker documentation`_.
-
-.. _`cookiecutter-django Docker documentation`: http://cookiecutter-django.readthedocs.io/en/latest/deployment-with-docker.html
-
-
-
+docker-componse -f local.yml build
+docker-componse -f local.yml up
